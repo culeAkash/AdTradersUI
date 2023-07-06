@@ -2,3 +2,9 @@
   height: 4em;
   width: 4em;
 }
+
+.navbar_login {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
