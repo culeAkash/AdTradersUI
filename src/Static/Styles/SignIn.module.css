@@ -1,0 +1,33 @@
+.signin_box {
+  width: 20%;
+  height: 60%;
+  background-color: black;
+}
+
+.login_container {
+  /* text-align: center; */
+  margin: 7% auto 0;
+  /* max-width: ; */
+}
+
+.form_input {
+  width: 60%;
+  margin-top: 2em !important;
+}
+
+.btn_grp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.form_btn {
+  margin: 0 0.5em !important;
+  width: 15% !important;
+}
+
+.mand {
+  color: #ff4136 !important;
+  margin: 1em 3em 0;
+}

@@ -15,7 +15,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { Link, useNavigate } from 'react-router-dom';
 import style from '../Static/Styles/Navbar.module.css'
 
-const pages = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }, { name: 'Contact Us', path: '/contact' }];
+const pages = [{ name: 'Home', path: '/' }, { name: 'Products', path: '/products' }, { name: 'About', path: '/about' }, { name: 'Contact Us', path: '/contact' }];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,14 +29,14 @@ function ResponsiveAppBar() {
   const handleCloseNavMenu = (path) => {
     console.log(path);
     setAnchorElNav(null);
-    navigate(path);
+    if (path)
+      navigate(path);
   };
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <SettingsIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
             <Typography
               variant="h6"
@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
                 color: 'inherit',
                 textDecoration: 'none',
               }}
-            >A.D. TRADERS
+            >A.D.TRADERS
             </Typography>
           </Link>
 
@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => handleCloseNavMenu(null)}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
@@ -92,12 +92,11 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <SettingsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <SettingsIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -127,7 +126,7 @@ function ResponsiveAppBar() {
             <ListItemButton sx={{ padding: '0.5em 0.5em' }}>
               <Link to="/login" className={style.navbar_login}>
                 <ListItemIcon sx={{ minWidth: '0', mt: '0.15em' }}>
-                  <LoginIcon />
+                  <LoginIcon style={{ color: 'white' }} />
                 </ListItemIcon>
 
                 <ListItemText primary="LOGIN AS ADMIN" sx={{

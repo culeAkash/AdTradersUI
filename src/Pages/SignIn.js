@@ -1,112 +1,45 @@
+import { Button, ButtonGroup, Card, Container, Divider, FormControl, FormHelperText, Input, InputLabel, Paper, TextField, Typography } from '@mui/material';
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import styles from '../Static/Styles/SignIn.module.css'
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
-
-const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
-
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
+    <Paper component='div' elevation={3} className={styles.login_container} sx={{ width: { xs: '90%', sm: '80%', md: '60%', lg: '50%' } }}>
+      <Card component='form' sx={{ pb: '2em' }} noValidate
+        autoComplete="off">
+        <Typography
+          align='center'
+          variant='h4'
+          gutterBottom={true}
           sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
+            fontFamily: 'monospace',
+            fontWeight: 900,
+            letterSpacing: '.1rem',
+            color: '#1976D2',
+            textDecoration: 'none',
+            mt: '0.4em'
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
-          </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
+          Signin Here
+        </Typography>
+        <Divider />
+        <p className={styles.mand}>* All fields are mandatory</p>
+        <div style={{ textAlign: 'center' }}>
+          <TextField required id="email" label="Email Address" type="text" className={styles.form_input}></TextField><br />
+          <TextField required id="password" label="Password" type="password" className={styles.form_input}></TextField><br />
+
+          <div className={styles.btn_grp}>
+            <Button color='primary' size='medium' variant='contained' className={styles.form_btn}>
+              Login
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
-      </Container>
-    </ThemeProvider>
-  );
+            <Button color='warning' size='medium' variant='contained' className={styles.form_btn}>
+              Reset
+            </Button>
+          </div>
+        </div>
+
+      </Card>
+    </Paper>
+  )
 }
