@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <React.Fragment>
+    <div className='app'>
       <CssBaseline />
       <Navbar />
 
@@ -25,7 +25,7 @@ function App() {
         <Route path="/login" element={<SignIn />} />
         <Route path='/products' element={<Products />} />
       </Routes>
-    </React.Fragment>
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { Link, useNavigate } from 'react-router-dom';
 import style from '../Static/Styles/Navbar.module.css'
 
-const pages = [{ name: 'Home', path: '/' }, { name: 'Products', path: '/products' }, { name: 'About', path: '/about' }, { name: 'Contact Us', path: '/contact' }];
+const pages = [{ name: 'Home', path: '/' }, { name: 'Products', path: '/products' }, { name: 'Contact Us', path: '/contact' }];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

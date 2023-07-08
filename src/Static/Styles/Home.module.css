@@ -1,0 +1,46 @@
+.car_item_content {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 20%;
+  right: 20%;
+  color: aliceblue;
+  text-align: center;
+}
+
+.info_card {
+  /* margin: 3%; */
+  background-color: #82b1ff;
+  height: 19em;
+  min-height: 60%;
+  color: azure;
+  /* text-align: center; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.info_section {
+  text-align: center;
+  /* margin: 2%; */
+  padding: 2%;
+  height: 30%;
+  width: 100%;
+}
+
+.company_logo {
+  width: 90%;
+  height: 50%;
+}
+
+.ceo_image {
+  width: 42%;
+}
+
+.info {
+  width: 58%;
+  text-align: start;
+  margin-left: 2%;
+  height: 100%;
+  padding-top: 1em;
+}
