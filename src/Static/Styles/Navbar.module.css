@@ -1,10 +1,37 @@
-.navbar_logo {
-  height: 4em;
-  width: 4em;
+.header {
+  display: flex;
+  position: relative;
 }
 
-.navbar_login {
-  display: flex;
-  text-decoration: none;
-  color: inherit;
+.navbar {
+  /* height: 4em; */
+  width: 100%;
+  background-color: rgb(232, 230, 226);
+  box-shadow: 0 0.5px 2px 1px rgb(176, 174, 172);
+}
+
+.navbar_collapse {
+  position: absolute;
+  left: 43%;
+  right: 43%;
+  width: 10%;
+  min-width: 3em;
+  top: 4px;
+}
+
+.login_button {
+  position: absolute;
+  right: 1%;
+  top: 0.5em;
+  cursor: pointer;
+}
+
+.btn {
+  width: 6em;
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    display: none !important;
+  }
 }
