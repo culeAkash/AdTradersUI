@@ -1,0 +1,24 @@
+.car_content {
+  height: 25em;
+  position: relative;
+}
+
+.car_image {
+  height: 100%;
+}
+
+.car_image_content {
+  position: absolute;
+  width: 36%;
+  left: 32%;
+  top: 35%;
+  color: antiquewhite;
+  font-size: larger;
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  .car_content {
+    height: 30em;
+  }
+}

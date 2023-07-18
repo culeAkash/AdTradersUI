@@ -1,46 +1,57 @@
-.car_item_content {
-  position: absolute;
-  top: 40%;
-  bottom: 40%;
-  left: 20%;
-  right: 20%;
-  color: aliceblue;
-  text-align: center;
-}
-
-.info_card {
-  /* margin: 3%; */
-  background-color: #82b1ff;
-  height: 19em;
-  min-height: 60%;
-  color: azure;
-  /* text-align: center; */
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+.home_container {
+  min-height: 100vh;
+  height: auto;
 }
 
 .info_section {
-  text-align: center;
-  /* margin: 2%; */
-  padding: 2%;
-  height: 30%;
+  padding: 1em;
+  margin-top: 2em;
+  /* background-color: blue; */
+  height: 40%;
+  min-height: 10em;
   width: 100%;
+  /* position: relative; */
+  display: flex;
 }
 
-.company_logo {
-  width: 90%;
-  height: 50%;
+.owner_images {
+  width: 40%;
+  margin-bottom: 1em;
+  /* height: 100%; */
 }
 
-.ceo_image {
-  width: 42%;
+.owner_images img {
+  display: block;
+  width: 100%;
+  min-height: 16em;
+  margin-top: 1em;
 }
 
-.info {
-  width: 58%;
-  text-align: start;
-  margin-left: 2%;
-  height: 100%;
-  padding-top: 1em;
+.company_info {
+  padding-left: 1em;
+  width: 60%;
+  color: blue;
+  font-size: larger;
+}
+
+.actions {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .owner_images img {
+    height: 20em;
+    margin-left: 9em;
+    min-height: 8em;
+    width: 60%;
+  }
+
+  .actions {
+    margin-top: 5em;
+    display: block;
+  }
+
+  .actions_small {
+    display: none;
+  }
 }
