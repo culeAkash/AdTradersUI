@@ -6,33 +6,33 @@ export default function Footer() {
     return (
         <div className="footer">
 
-            <footer class="page-footer font-small blue pt-4">
+            <footer className="page-footer font-small blue pt-4">
 
-                <div class="container-fluid text-center text-md-left">
+                <div className="container-fluid text-center text-md-left">
 
-                    <div class="row">
+                    <div className="row">
 
-                        <div class="col-md-6 mt-md-0 mt-3 mb-2">
+                        <div className="col-md-6 mt-md-0 mt-3 mb-2">
 
-                            <h5 class="text-uppercase">adtraders.com</h5>
+                            <h5 className="text-uppercase">adtraders.com</h5>
 
                         </div>
 
 
 
 
-                        <div class="col-md-3 mb-md-0 mb-3">
+                        <div className="col-md-3 mb-md-0 mb-3">
 
-                            <h5 class="text-uppercase">Connect With us</h5>
-
-
+                            <h5 className="text-uppercase">Connect With us</h5>
 
 
-                            <ul class="list-unstyled">
+
+
+                            <ul className="list-unstyled">
 
                                 <li>
 
-                                    <i class="youtube icon"></i>
+                                    <i className="youtube icon"></i>
 
                                     YouTube
 
@@ -40,7 +40,7 @@ export default function Footer() {
 
                                 <li>
 
-                                    <i class="instagram icon"></i>
+                                    <i className="instagram icon"></i>
 
                                     Instagram
 
@@ -50,7 +50,7 @@ export default function Footer() {
 
                                 <li>
 
-                                    <i class="linkedin icon"></i>
+                                    <i className="linkedin icon"></i>
 
                                     LinkedIn
 
@@ -65,18 +65,18 @@ export default function Footer() {
 
 
 
-                        <div class="col-md-3 mb-md-0 mb-3">
+                        <div className="col-md-3 mb-md-0 mb-3">
 
-                            <h5 class="text-uppercase">Follow us here</h5>
-
-
+                            <h5 className="text-uppercase">Follow us here</h5>
 
 
-                            <ul class="list-unstyled">
+
+
+                            <ul className="list-unstyled">
 
                                 <li>
 
-                                    <i class="facebook icon"></i>
+                                    <i className="facebook icon"></i>
 
                                     Facebook
 
@@ -84,7 +84,7 @@ export default function Footer() {
 
                                 <li>
 
-                                    <i class="twitter icon"></i>
+                                    <i className="twitter icon"></i>
 
                                     Twitter
 
@@ -92,7 +92,7 @@ export default function Footer() {
 
                                 <li>
 
-                                    <i class="google plus icon"></i>
+                                    <i className="google plus icon"></i>
 
                                     Google Plus
 
@@ -108,7 +108,7 @@ export default function Footer() {
 
                 </div>
 
-                <div class="footer-copyright text-center py-3">
+                <div className="footer-copyright text-center py-3">
 
                     © 2023 Copyright:
 

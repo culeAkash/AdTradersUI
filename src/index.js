@@ -13,11 +13,20 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import { store } from './store/store';
+import { Provider } from 'react-redux'
+import { fetchProducts } from './Features/Products/ProductSlice';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+store.dispatch(fetchProducts())
+
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </React.StrictMode>
   </BrowserRouter>
 );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Carousel, CarouselControl, CarouselIndicators, CarouselItem } from 'reactstrap';
 import styles from '../Static/Styles/Carousal.module.css'
+import { Link } from 'react-router-dom'
 
 export default function HomeCarousal({ items }) {
 
@@ -30,7 +31,7 @@ export default function HomeCarousal({ items }) {
     <div className={styles.car_image_content}>
       <p>Welcome to our website</p>
       <Button color='primary' size='lg'>
-        See All Products
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/products">See All Products</Link>
       </Button>
     </div>
   )
